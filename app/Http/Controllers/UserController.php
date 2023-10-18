@@ -14,12 +14,18 @@ class UserController extends Controller
     // Show New User Registration Form
     public function loginForm()
     {
+        if(Auth::check()){
+            return redirect('todos/list');
+        }
         return view('login');
     }
 
     // Show New User Registration Form
     public function registrationForm()
     {
+        if(Auth::check()){
+            return redirect('todos/list');
+        }
         return view('register');
     }
 
