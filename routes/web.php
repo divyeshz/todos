@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 // User Module Routes Group
 Route::controller(UserController::class)->group(function(){
-    Route::get('/', 'loginForm')->name('login');
+    Route::get('/', 'loginForm')->name('loginForm');
     Route::get('register','registrationForm')->name('register');
     Route::post('register','register')->name('register.store');
     Route::post('login','login')->name('login');
